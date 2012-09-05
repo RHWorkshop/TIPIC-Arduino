@@ -1,0 +1,63 @@
+TIPIC Arduino - WiFly code
+
+============
+TRADEMARKS
+============
+"WiFly", "RN-131","RN-171", "RN-174", "RN-XV" are trademarks / tradenames of Roving Networks Inc.
+"Arduino" is a trademark of Arduino LLC.
+Other trademarks referenced are the property of their respective owners.
+
+============
+LICENSE
+============
+This code is released under whatever public license applies…
+
+WiFly code based on WebTimeA1.ino by Tom Waldock
+© 2012 Andy Rawson
+
+   Permission is hereby granted, free of charge, to any person
+   obtaining a copy of this software and associated documentation
+   files (the "Software"), to deal in the Software without
+   restriction, including without limitation the rights to use, copy,
+   modify, merge, publish, distribute, sublicense, and/or sell copies
+   of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+   BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+============
+INSTALLATION
+============
+
+Libraries Needed
+Arduino WiFly Driver - http://arduinowifly.sourceforge.net/
+Streaming and PString libraries by Mikal Hart's from http://arduiniana.org
+I2C master library by Peter Fleury <pfleury@gmx.ch>  http://jump.to/fleury
+
+
+This is the initial release and still needs lots of work. It uses a WiFly module for communication to the phone. It joins the WiFly to a local wireless network, this will probably be changed to the WiFly setting up an adhoc network for the phone to connect to a known ip after joining it. That is assuming that a WiFly is still used in the future. The best communication path is probably with Bluetooth 4 BLE but that requires a BLE enabled phone so for now that limits the phones available to use.
+
+Configuration
+The current version joins the WiFly to a local wireless network to talk to the phone. To do this you need to hardcode the SSID and Passcode. It currently supports 2 different SSIDs and will failover to the second one if it can't join the first. Set MY_WIFI_SSID and MY_WIFI_PASSPHRASE at least.
+
+=======
+SUPPORT
+=======
+https://github.com/RHWorkshop/
+
+
+=======
+HISTORY
+=======
+
+*** 2012-Sept-4 Initial release.
